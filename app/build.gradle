@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'wutong'
+            keyPassword 'st571216'
+            storeFile file('../buildSystem/keystore')
+            storePassword 'st571216'
+        }
+    }
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.example.yangwei.myapplication"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        buildConfigField 'String', 'SHARE_WX_KEY', rootProject.ext.share_wx_key
+        buildConfigField 'String', 'SHARE_WX_SECRET', rootProject.ext.share_wx_secret
+        buildConfigField 'String', 'SHARE_SINA_KEY', rootProject.ext.share_sina_key
+        buildConfigField 'String', 'SHARE_SINA_SECRET', rootProject.ext.share_sina_secret
+        buildConfigField 'String', 'SHARE_QQ_KEY', rootProject.ext.share_qq_key
+        buildConfigField 'String', 'SHARE_QQ_SECRET', rootProject.ext.share_qq_secret
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    //  PhotoView是一个开源的图片查看库，可以实现图片的浏览，手势放大缩小等操作，
+    //以及支持在ViewPager中翻页浏览图片等功能
+    compile 'com.commit451:PhotoView:1.2.4'
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile project(':servicecore')
+    compile project(':photoSelectCore')
+}

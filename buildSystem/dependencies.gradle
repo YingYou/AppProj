@@ -1,0 +1,14 @@
+ext {
+    compileSdkVersion = 23
+    buildToolsVersion = '23.0.3'
+
+    minSdkVersion = 16
+    targetSdkVersion = 23
+    versionCode = 1
+    versionName = '0.9'
+
+    androidSupportVersion = '23.4.0'
+    mode_debug='true'
+
+
+}

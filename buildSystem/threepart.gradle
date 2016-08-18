@@ -1,0 +1,15 @@
+ext {
+    umeng_key = '"57a4335667e58e9f52001ad3"'
+    share_wx_key = '"xxx"'
+    share_wx_secret = '"xxx"'
+    share_sina_key = '"2660537398"'
+    share_sina_secret = '"f8fe6aea6499cb299d4586d78b497f14"'
+    share_qq_key = '"1105595032"'
+    share_qq_secret = '"26v5CVGzmsrHBrrM"'
+
+    //注意QQ的key 在Manifest配置文件中也要配置
+    //极光参数在Manifest配置
+    //UMENG 社会化分享参数在Manifest配置文件中也要配置
+    //高德地图参数在Manifest配置
+
+}

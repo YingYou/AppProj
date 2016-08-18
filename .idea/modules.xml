@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appProj.iml" filepath="$PROJECT_DIR$/appProj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/photoSelectCore/photoSelectCore.iml" filepath="$PROJECT_DIR$/photoSelectCore/photoSelectCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servicecore/servicecore.iml" filepath="$PROJECT_DIR$/servicecore/servicecore.iml" />
+    </modules>
+  </component>
+</project>
